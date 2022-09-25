@@ -23,9 +23,17 @@
     <p>Já me livrei da maldição</p>
 
     <script>
-        window.alert('Bem vindo!')
-        window.confirm('Está gostando do curso?')
-        window.prompt('Qual o seu nome?')
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é ${String(s)}`) //ultiliza crase
+        //window.alert('A soma de ' +  n1 + ' mais ' + n2 + ' é ' + String(s))
+
+        //String() ou .toString para converter para string
+        //Number.parseInt para forçar um número real
+        //Number.parseInt para forçar um número inteiro
+        //Number + Number: adição
+        //String + String: concatenação
     </script>
 </body>
 </html>
