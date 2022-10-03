@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <p>Velocidade do carro <input type="number" name="vel" id="vel"> km
+    <input type="button" value="Verificar" id="verif"></p>
+    <div id="res"></div>
+
+    <script>
+        verif.addEventListener('click', calcular)
+
+        function calcular(){
+            var velo = Number(window.document.querySelector('input#vel').value)
+            var res = window.document.querySelector('div#res')
+
+            res.innerHTML = `<p>A sua velocidade atual é de <strong>${velo}Km...</strong></p>`
+            if (velo > 80) {
+                res.innerHTML += '<p>Você ultrapassou o limite de velocidade. Você foi <strong>multado!.</strong></p>'
+            }
+
+            res.innerHTML += 'Dirija sempre com sinto de segurança!'
+            
+        }
+    </script>
+</body>
+</html>
