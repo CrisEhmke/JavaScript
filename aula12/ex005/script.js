@@ -33,19 +33,19 @@ function checar() {
                     }
         }
 
-        if (sexo[1].checked) {
-            ilog.innerHTML = `Aqui temos uma mulher de ${idade} anos`
-            if (idade >= 0 && idade < 10) {
-                img.style.backgroundImage = 'url(imagens/menina.jpg)'
+    if (sexo[1].checked) {
+        ilog.innerHTML = `Aqui temos uma mulher de ${idade} anos`
+        if (idade >= 0 && idade < 10) {
+            img.style.backgroundImage = 'url(imagens/menina.jpg)'
+        } else
+            if (idade < 21) {
+                img.style.backgroundImage = 'url(imagens/moça.jpg)'
             } else
-                if(idade < 21) {
-                    img.style.backgroundImage = 'url(imagens/moça.jpg)'
-                } else
-                    if(idade < 50) {
-                        img.style.backgroundImage = 'url(imagens/mulher.jpg)'
-                    } else{
-                        img.style.backgroundImage = 'url(imagens/idosa.jpg)'
-                    }
-        }
+                if (idade < 50) {
+                    img.style.backgroundImage = 'url(imagens/mulher.jpg)'
+                } else {
+                    img.style.backgroundImage = 'url(imagens/idosa.jpg)'
+                }
+    }
 
 }
