@@ -8,14 +8,19 @@ function checar() {
     let anonas = document.querySelector('#ano').value;
     let container = document.querySelector('#container');
     let ilog = document.querySelector('#log');
-    let sexo = document.getElementsByTagName('sexo')
+    let sexo = document.getElementsByTagName('sexo');
     let idade = anoatual - anonas;
 
     container.appendChild(img);
     img.id = 'image';
 
+    if (anonas == 0 || anonas > anoatual){
+        ilog.innerHTML = 'Data inválida!'
+    } else
+        if(sexo.checked){
+            if(idade >= 0 && idade < 10){
+                img.style.backgroundImage = 'url(imagens/menino.jpg)'
+            }
+        }
 
-
-    if (anonas == 0 || anonas > anoatual) {
-        ilog.innerHTML = 'Data inválida'
-    }   
+}
