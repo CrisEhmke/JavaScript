@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #567dff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header{
+    color: #fff;
+}
+
+aside{
+    background-color: #fff;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px 0px 0px 20px;
+}
+
+aside > div > p{
+    padding-bottom: 10px;
+}
+
+#log{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    font-size: 18pt;
+}
+
+#image{
+    background: black no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 5px auto;
+}
+
+footer{
+    color: #fff;
+    margin-top: 30px;
+}
