@@ -1,8 +1,7 @@
-check.addEventListener('click', checar);
-
 //variavel de escopo global
 let img = document.createElement('div');
 
+check.addEventListener('click', checar);
 function checar() {
     let anoatual = new Date().getFullYear();
     let anonas = document.querySelector('#ano').value;
@@ -16,7 +15,7 @@ function checar() {
 
     if (anonas == 0 || anonas > anoatual) {
         ilog.innerHTML = 'Data inválida!'
-        img.style.background = '#fff none'
+        img.style.backgroundImage = 'none'
     } else
         if (sexo[0].checked) {
             ilog.innerHTML = `Aqui temos um homem de ${idade} anos`
@@ -35,7 +34,7 @@ function checar() {
 
     if (anonas == 0 || anonas > anoatual) {
         ilog.innerHTML = 'Data inválida!'
-        img.style.background = '#fff none'
+        img.style.backgroundImage = 'none'
     } else
         if (sexo[1].checked) {
             ilog.innerHTML = `Aqui temos uma mulher de ${idade} anos`
