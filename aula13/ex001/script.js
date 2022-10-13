@@ -1,18 +1,37 @@
 let cont = document.querySelector('#cont')
+let reset = document.querySelector('#reset')
+let clear = document.querySelectorAll('.clear')
+let res = document.querySelector('#res')
+
+clear.forEach((clear) => clear.addEventListener('focus', limpar))
+cont.addEventListener('click', contar)
 
 
+function contar(){
+    let i = Number (document.querySelector('#ini').value)
+    let f = Number (document.querySelector('#fim').value)
+    let p = Number (document.querySelector('#pas').value)
 
+    res.innerHTML = 'Contando: '
 
-cont.onclick = function(){
-    let inicio = Number (document.querySelector('#ini').value)
-    let final = Number (document.querySelector('#fim').value)
-    let passo = Number (document.querySelector('#pas').value)
-    let res = document.querySelector('#res')
+    if(i == 0 || f == 0 || p == 0){
+        res.innerHTML = 'Erro! Digite um valor válido'
 
-    
-        for(let c = inicio; c <= final; c = c + passo){
-            res.innerHTML += `${c}`
+    } else
+        if(i < f){
+        for(let c = i; c <= f; c += p){
+            res.innerHTML += `${c} &#10148; `
         }
-    
+    } else {
+        for(let c = i; c >= f; c -= p){
+            res.innerHTML += `${c} &#10148; `
+        }
+    }
+    res.innerHTML += 'Fim!'
+    cont.removeEventListener('click', contar)
+}
 
+function limpar(){
+    res.innerHTML = ''
+    cont.addEventListener('click', contar)
 }

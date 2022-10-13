@@ -20,14 +20,19 @@ body h1{
     font-size: 2.5em;
 }
 
-#form{
+#container{
     background-color: #fff;
     width: 400px;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
 }
 
 div label{
@@ -44,9 +49,8 @@ div label{
 }
 
 #res{
-    background-color: #6a8af3;
+    padding: 20px 0px;  
     
-    height: auto;
 }
 
 footer{
