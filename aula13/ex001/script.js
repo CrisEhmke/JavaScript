@@ -3,7 +3,8 @@ let reset = document.querySelector('#reset')
 let clear = document.querySelectorAll('.clear')
 let res = document.querySelector('#res')
 
-clear.forEach((clear) => clear.addEventListener('focus', limpar))
+clear.forEach((clear) => clear.addEventListener('focus', limpar))//Percorre todos os elementos com a mesma classe e aplica a função pra cada um deles.
+
 cont.addEventListener('click', contar)
 
 
@@ -14,8 +15,8 @@ function contar(){
 
     res.innerHTML = 'Contando: '
 
-    if(i == 0 || f == 0 || p == 0){
-        res.innerHTML = 'Erro! Digite um valor válido'
+    if(i == 0 || f == 0 || p == 0 || p > f){
+        res.innerHTML = 'Erro! Digite um valor válido... '
 
     } else
         if(i < f){
@@ -28,10 +29,10 @@ function contar(){
         }
     }
     res.innerHTML += 'Fim!'
-    cont.removeEventListener('click', contar)
+    // cont.removeEventListener('click', contar)
 }
 
 function limpar(){
     res.innerHTML = ''
-    cont.addEventListener('click', contar)
+    // cont.addEventListener('click', contar)
 }
