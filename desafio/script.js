@@ -2,19 +2,18 @@ let enviar = document.querySelector('#enviar').addEventListener('click', adicion
 
 let check = document.querySelector('#check')
 
-
-// let n = Number(document.querySelector('#num').value)
-
 let number = document.querySelector('#num')
 
 
 
 function adicionar(){
-
-    n = Number(number.value)
+    let n = Number(number.value)
+    console.log(n)
     if(n == 0 || n > 100 || n == ''){
-        window.alert('errado')
+
+        
+        window.alert('Digite um valor válido!')
     } else{
-        window.alert('certo')
+        window.alert('Tudo certo!')
     }
 }
