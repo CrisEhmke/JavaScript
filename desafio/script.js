@@ -29,7 +29,7 @@ function checar() {
     if (v.length == 0) {
         window.alert = `Digite algum valor para finalizar`
     } else {
-        v.sort()
+        v.sort((a, b) => a - b)
         res.innerHTML = ''
         res.innerHTML += `<p>Ao todo temos ${v.length} números cadastrados</p>`
         let soma = 0
@@ -40,14 +40,27 @@ function checar() {
 
         let maior = v[v.length - 1]
         let menor = v[0]
-        let u = v.length
+        
 
         res.innerHTML += `<p>O maior valor informado foi ${maior}</p>`
         res.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
         res.innerHTML += `<p>A soma de todos os valores é ${soma}</p>`
-        res.innerHTML += `<p>A média de todos os valores é ${soma / 2}</p>`
+        res.innerHTML += `<p>A média de todos os valores é ${soma / v.length}</p>`
     }
-
-
 }
 
+// Outra forma de saber o maior e o menor valor
+// let valores = [1,2,3]
+// let maior = valores[0]
+// let menor = valores[0]
+
+// for (let i of valores) {
+
+//     if(i > maior){
+//         maior = i
+//     }
+//     if(i < menor){
+//         menor = i
+//     }
+    
+// }
